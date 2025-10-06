@@ -1,4 +1,1 @@
-export const communityRoomNames = [
-  'dj_wici',
-  'other',
-]
+export const communityRoomNames = ['dj_wici', 'other']

@@ -1,3 +1,1 @@
-export const iframeFeatureAllowList = [
-  'fullscreen',
-]
+export const iframeFeatureAllowList = ['fullscreen']
