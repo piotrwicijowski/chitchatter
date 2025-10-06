@@ -219,7 +219,7 @@ const allowedOrigins = [
   'http://localhost:3003', // Simple API server
 ]
 
-const handler: Handler = async (req: Request, context: Context) => {
+export default async (req: Request, context: Context) => {
   console.log(`API handler called with method: ${req.method}`)
 
   const headers = new Headers()
@@ -276,5 +276,3 @@ const handler: Handler = async (req: Request, context: Context) => {
     })
   }
 }
-
-export { handler }
