@@ -1,4 +1,4 @@
-import type { Context } from '@netlify/functions'
+import type { Context, Handler } from '@netlify/functions'
 
 /**
  * TURN Server Configuration Handler
@@ -219,7 +219,7 @@ const allowedOrigins = [
   'http://localhost:3003', // Simple API server
 ]
 
-export default async function handler(req: Request, context: Context) {
+const handler: Handler = async (req: Request, context: Context) => {
   console.log(`API handler called with method: ${req.method}`)
 
   const headers = new Headers()
@@ -276,3 +276,5 @@ export default async function handler(req: Request, context: Context) {
     })
   }
 }
+
+export { handler }

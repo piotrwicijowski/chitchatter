@@ -9,6 +9,7 @@ import svgr from 'vite-plugin-svgr'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import macrosPlugin from 'vite-plugin-babel-macros'
 import { VitePWA } from 'vite-plugin-pwa'
+import netlify from '@netlify/vite-plugin'
 
 import { manifest } from './manifest'
 import { RouterType } from './src/models/router'
@@ -25,6 +26,7 @@ const srcPaths = [
   'img',
   'utils',
   'test-utils',
+  'netlify',
 ]
 
 const srcPathAliases = srcPaths.reduce((acc, dir) => {
@@ -79,6 +81,7 @@ const config = () => {
         manifest,
         selfDestroying: true,
       }),
+      netlify(),
     ],
     resolve: {
       alias: {
