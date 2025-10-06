@@ -209,6 +209,8 @@ const getTurnServer = (): RTCIceServer => {
 }
 
 const allowedOrigins = [
+  'https://chitchatter-wicijowski.netlify.app/',
+  'https://chitchatter.wicijowski.pl/',
   'https://chitchatter.im',
   'https://chitchatter.vercel.app',
   'https://chitchatter-git-develop-jeremyckahn.vercel.app',
